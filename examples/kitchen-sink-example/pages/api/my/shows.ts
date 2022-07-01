@@ -21,7 +21,7 @@ const requireScope = (scope: string, apiRoute: NextApiHandler) =>
 
 const apiRoute = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const response = await fetch('https://api.tvmaze.com/search/shows?q=identity');
+    const response = await fetch('https://api.tvmaze.com/search/shows?q=bond');
     const shows = await response.json();
 
     res.status(200).json({ shows });
