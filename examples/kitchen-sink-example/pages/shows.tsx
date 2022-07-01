@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 console.log('test message');
+console.log(user);
 
 type TVShow = { show: { name: string } };
 
