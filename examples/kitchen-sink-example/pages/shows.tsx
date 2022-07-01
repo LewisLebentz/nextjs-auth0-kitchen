@@ -4,6 +4,8 @@ import useApi from '../lib/use-api';
 import Layout from '../components/layout';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
+console.log('test message');
+
 type TVShow = { show: { name: string } };
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
