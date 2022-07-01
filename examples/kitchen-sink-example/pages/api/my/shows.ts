@@ -5,7 +5,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 const getUser = withPageAuthRequired({
   return user['nickname'];
-}};
+});
 
 const verifyJwt = NextJwtVerifier({
   issuer: process.env.AUTH0_ISSUER_BASE_URL,
