@@ -4,7 +4,7 @@ import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 const getUser = withPageAuthRequired({
-  return user['nickname']
+  return user['nickname'];
 }};
 
 const verifyJwt = NextJwtVerifier({
