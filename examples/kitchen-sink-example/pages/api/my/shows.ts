@@ -3,6 +3,10 @@ import { NextAuthenticatedApiRequest } from '@serverless-jwt/next/dist/types';
 import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
+const getUser = withPageAuthRequired({
+  return user['nickname']
+}};
+
 const verifyJwt = NextJwtVerifier({
   issuer: process.env.AUTH0_ISSUER_BASE_URL,
   audience: process.env.AUTH0_AUDIENCE
@@ -22,7 +26,7 @@ const requireScope = (scope: string, apiRoute: NextApiHandler) =>
 
 const apiRoute = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const response = await fetch('https://api.tvmaze.com/search/shows?q=view');
+    const response = await fetch('https://api.tvmaze.com/search/shows?q=' + getUser);
     const shows = await response.json();
 
     res.status(200).json({ shows });
