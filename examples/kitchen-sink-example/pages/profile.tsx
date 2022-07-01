@@ -9,7 +9,6 @@ export default withPageAuthRequired(function Profile({ user }) {
       <h1>Profile</h1>
       <h4>Profile</h4>
       <pre data-testid="profile">{JSON.stringify(user, null, 2)}</pre>
-      <h4>Nick:</h4>      
     </Layout>
   );
 });
