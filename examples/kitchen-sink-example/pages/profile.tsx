@@ -11,4 +11,5 @@ export default withPageAuthRequired(function Profile({ user }) {
       <pre data-testid="profile">{user['nickname']}</pre>
     </Layout>
   );
+  console.log('user is', user['nickname']);
 });
