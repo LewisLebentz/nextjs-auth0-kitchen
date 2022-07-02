@@ -5,11 +5,11 @@ import Layout from '../components/layout';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 console.log('test message');
-console.log(user);
 
 type TVShow = { show: { name: string } };
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
+  console.log('aeae');
   const { response, error, isLoading } = useApi('/api/shows');
 
   return (
