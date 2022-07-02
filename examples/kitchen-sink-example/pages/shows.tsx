@@ -12,11 +12,12 @@ type TVShow = { show: { name: string } };
 
 function Profile() {
   const { user } = useUser();
+  console.log({ user });
   return { user };
 }
 
-const x = Profile();
-console.log(x);
+// const x = Profile();
+// console.log(x);
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
   const { response, error, isLoading } = useApi('/api/shows');
