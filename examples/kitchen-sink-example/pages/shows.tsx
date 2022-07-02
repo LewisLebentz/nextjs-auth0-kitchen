@@ -8,10 +8,10 @@ console.log('test message');
 
 type TVShow = { show: { name: string } };
 
-function withPageAuthRequired(function Profile({ user }) {
+function Profile({ user }) {
   console.log('user is', user['nickname']);
   console.log('test');
-  return ({user['nickname']});
+  return ({user['nickname']}});
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
   const { response, error, isLoading } = useApi('/api/shows');
