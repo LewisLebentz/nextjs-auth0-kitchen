@@ -16,6 +16,7 @@ function Profile() {
   return { user };
 }
 
+Profile();
 // const x = Profile();
 // console.log(x);
 
