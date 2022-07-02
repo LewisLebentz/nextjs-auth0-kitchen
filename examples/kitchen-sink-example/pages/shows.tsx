@@ -12,7 +12,7 @@ console.log('test message');
 type TVShow = { show: { name: string } };
 
 function Profile() {
-  const { user, error, isLoading } = useUser();
+  const { user } = useUser();
   return {user.name};
 }
 
