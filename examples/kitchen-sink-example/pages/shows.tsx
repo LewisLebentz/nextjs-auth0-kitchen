@@ -8,7 +8,7 @@ console.log('test message');
 
 type TVShow = { show: { name: string } };
 
-function Profile({ user }) {
+ Profile({ user }) {
   console.log('user is', user['nickname']);
   console.log('test');
   return ({user['nickname']}});
