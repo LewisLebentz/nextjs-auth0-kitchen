@@ -9,7 +9,7 @@ console.log('test message');
 type TVShow = { show: { name: string } };
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
-  console.log('aeae');
+  console.log({user});
   const { response, error, isLoading } = useApi('/api/shows');
 
   return (
