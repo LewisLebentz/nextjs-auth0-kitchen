@@ -1,6 +1,5 @@
 import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 
 function Profile({ user, error, isLoading }) {
