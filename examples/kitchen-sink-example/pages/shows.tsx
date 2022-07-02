@@ -13,7 +13,7 @@ type TVShow = { show: { name: string } };
 
 function Profile() {
   const { user } = useUser();
-  return {user.name};
+  return {user['name']};
 }
 
 var x = Profile();
