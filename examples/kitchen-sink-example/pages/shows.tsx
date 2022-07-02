@@ -6,17 +6,16 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 import { useUser } from '@auth0/nextjs-auth0';
 
-
 console.log('test message');
 
 type TVShow = { show: { name: string } };
 
 function Profile() {
   const { user } = useUser();
-  return {user};
-};
+  return { user };
+}
 
-var x = Profile();
+const x = Profile();
 console.log(x);
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
