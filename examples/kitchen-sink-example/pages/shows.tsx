@@ -12,9 +12,9 @@ console.log('test message');
 type TVShow = { show: { name: string } };
 
 function Profile() {
-//   const { user } = useUser();
+  const { user } = useUser();
   return {user['name']};
-}
+};
 
 var x = Profile();
 console.log(x);
