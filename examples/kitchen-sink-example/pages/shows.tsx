@@ -4,9 +4,24 @@ import useApi from '../lib/use-api';
 import Layout from '../components/layout';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
+import { useUser } from '@auth0/nextjs-auth0';
+
+
 console.log('test message');
 
 type TVShow = { show: { name: string } };
+
+function Profile() {
+  const { user, error, isLoading } = useUser();
+
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
+  if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
+  return {user.name};
+}
+
+var x = Profile();
+console.log(x);
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
   const { response, error, isLoading } = useApi('/api/shows');
