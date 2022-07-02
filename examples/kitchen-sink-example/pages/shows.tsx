@@ -10,7 +10,7 @@ console.log('test message');
 
 type TVShow = { show: { name: string } };
 
-function Profile() {
+export function Profile() {
   const { user } = useUser();
   console.log({ user });
   return { user };
