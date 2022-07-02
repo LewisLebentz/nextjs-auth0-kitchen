@@ -24,6 +24,11 @@ const Header = (): React.ReactElement => {
               <a>TV Shows</a>
             </Link>
           </li>
+          <li>
+            <Link href="/blah">
+              <a>Blah</a>
+            </Link>
+          </li>          
           {user ? (
             <>
               <li>
