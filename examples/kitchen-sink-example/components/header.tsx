@@ -28,7 +28,7 @@ const Header = (): React.ReactElement => {
             <Link href="/blah">
               <a>Blah</a>
             </Link>
-          </li>          
+          </li>
           {user ? (
             <>
               <li>
