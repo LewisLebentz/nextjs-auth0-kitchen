@@ -20,8 +20,8 @@ type TVShow = { show: { name: string } };
 // const x = Profile();
 // console.log(x);
 
-const user = useUser();
-console.log(user);
+// const user = useUser();
+// console.log(user);
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
   const { response, error, isLoading } = useApi('/api/shows');
