@@ -4,7 +4,7 @@ import useApi from '../lib/use-api';
 import Layout from '../components/layout';
 import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 
-import { useUser } from '@auth0/nextjs-auth0';
+// import { useUser } from '@auth0/nextjs-auth0';
 
 console.log('test message');
 
