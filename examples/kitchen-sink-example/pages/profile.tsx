@@ -12,4 +12,5 @@ export default withPageAuthRequired(function Profile({ user }) {
     </Layout>
   );
   console.log('user is', user['nickname']);
+  console.log('test');
 });
