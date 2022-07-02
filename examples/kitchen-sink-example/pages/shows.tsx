@@ -15,7 +15,7 @@ function Profile() {
   return { user };
 }
 
-const x = Profile();
+let x = Profile();
 console.log(x);
 
 export default withPageAuthRequired(function TvShows(): React.ReactElement {
